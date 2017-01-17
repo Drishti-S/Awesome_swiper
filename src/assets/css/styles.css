@@ -1,0 +1,307 @@
+.done_task{
+      text-decoration: line-through;
+}
+
+
+*{
+  margin:0;
+  padding:0;
+}
+
+.placeholder{
+  font-size:18pt;
+  height:50px;
+  width:50%;
+  margin: 50px 50px 50px 50px;
+}
+
+ header{
+  width:100%; 
+  background:#1d1f20; 
+  height:60px; 
+  line-height:60px;
+}
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  padding:13px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:1000000
+  
+}
+.menu{; font-weight:bold; font-size:0.8em; width:100%; background:#131313;  position:absolute; text-align:center;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+.menu li:hover{display: block;    background:#181818; padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:black;}
+.menu ul li a:hover {  color: black; text-decoration:none;}
+.menu a{text-decoration:none; color:white;}
+.menu a:hover{text-decoration:none; color:black;}
+
+.glyphicon-home{
+  color:white; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+
+body{
+  font:22px/1.3 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: black;
+  color: #fff;
+  text-align:center;
+  background-image: url('../blurry_background__with_textured_clouds_wallpaper__by_vactual-d9vwd5u.png');
+  background-size: 100%;
+}
+
+a, a:visited {
+  outline:none;
+  color:#389dc1;
+}
+
+a:hover{
+  text-decoration:none;
+  background-color: black;
+  color: black;
+}
+
+section, footer, nav{   /*header aside removed*/
+  display: block;
+}
+
+/*-------------------------
+  The menu
+--------------------------*/
+
+nav{
+  display:inline-block;
+  margin:12px;
+  background-color:#575C79;
+  box-shadow:0 1px 1px #ccc;
+  border-radius:0px;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+nav a{
+  display:inline-block;
+  padding: 18px 30px;
+  color:#fff !important;
+  font-weight:bold;
+  font-size:16px;
+  text-decoration:none !important;
+  line-height:1;
+  text-transform: uppercase;
+  background-color:transparent;
+
+  -webkit-transition:background-color 0.25s;
+  -moz-transition:background-color 0.25s;
+  transition:background-color 0.25s;
+}
+
+/* nav a:first-child{
+  border-radius:0px 0 0 0px;
+}
+
+nav a:last-child{
+  border-radius:0 0px 0px 0;
+}*/
+
+nav.home .home,
+nav.office .office,
+nav.school .school,
+nav.other .other,
+nav.addCategory .addCategory{
+  background-color:#061A17;
+}
+
+p{
+  font-size:22px;
+  font-weight:bold;
+  color:#fff;
+}
+
+p b{
+  color:#ffffff;
+  display:inline-block;
+  padding:5px 10px;
+  background-color:#c4d7e0;
+  border-radius:2px;
+  text-transform:uppercase;
+  font-size:18px;
+}
+
+.header{
+  font-family: fantasy;
+  font-weight: bold;
+  color: black;
+}
+
+
+@media screen and (max-width: 768px) {
+.done_task{
+      text-decoration: line-through;
+}
+.header{
+  font-family: fantasy;
+  font-weight: bold;
+  color: black;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+.placeholder{
+  font-size:18pt;
+  height:50px;
+  width:50%;
+   margin: 50px 50px 50px 50px;
+}
+
+
+.swiper-container {
+      width: 100%;
+      height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+body{
+  font:22px/1.3 'Open Sans', sans-serif;
+  color: black;
+  font-weight: bold;
+  text-align:center;
+  /*background: url('http://img00.deviantart.net/c3fd/i/2016/080/2/9/blurry_background__with_textured_clouds_wallpaper__by_vactual-d9vwd5u.png');*/
+   background-size: 100%;
+   background-color: #E2DCDC;
+   /*background-size: 100%;*/
+   /*background-image: url('https://cdn.pixabay.com/photo/2016/01/14/01/41/image-view-1139204_960_720.jpg');*/
+
+}
+
+a, a:visited {
+  outline:none;
+  color:#389dc1;
+}
+
+a:hover{
+  text-decoration:none;
+}
+
+section, footer, header, aside, nav{
+  display: block;
+}
+
+/*-------------------------
+  The menu
+--------------------------*/
+
+nav{
+  display:block;
+  margin:12px;
+  background-color:#575C79;
+  box-shadow:0 1px 1px #ccc;
+  border-radius:0px;
+}
+
+nav a{
+  display:block;
+  padding: 18px 30px;
+  color:#fff !important;
+  font-weight:bold;
+  font-size:16px;
+  text-decoration:none !important;
+  line-height:1;
+  text-transform: uppercase;
+  background-color:transparent;
+
+  -webkit-transition:background-color 0.25s;
+  -moz-transition:background-color 0.25s;
+  transition:background-color 0.25s;
+}
+
+nav a:first-child{
+  border-radius:0px 0 0 0px;
+}
+
+nav a:last-child{
+  border-radius:0 0px 0px 0;
+}
+
+nav.home .home,
+nav.office .office,
+nav.school .school,
+nav.other .other{
+  background-color:#061A17;
+}
+
+p{
+  font-size:22px;
+  font-weight:bold;
+  color:#fff;
+}
+
+p b{
+  color:#ffffff;
+  display:inline-block;
+  padding:5px 10px;
+  background-color:#c4d7e0;
+  border-radius:2px;
+  text-transform:uppercase;
+  font-size:18px;
+}
+
+/*SWIPER STYLE
+*/
+.my-swipe {
+      height: 350px;
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+    }
+}
