@@ -15,6 +15,10 @@
   margin: 50px 50px 50px 50px;
 }
 
+.page_height{
+  height: 460px;
+}
+
  header{
   width:100%; 
   background:#1d1f20; 

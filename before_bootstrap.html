@@ -23,65 +23,33 @@
   <!-- <script src="vue-swipe.js"></script> -->
   
   
-  <style>
-  	
-  </style>
+  <style> </style>
 </head>
-<body >
-<!-- class="img-responsive" style="background-image: url(http://keenthemes.com/preview/metronic/theme/assets/global/plugins/jcrop/demos/demo_files/image1.jpg); background-size: 100%" -->
+<body background-size="100%">
 
 <div id="main">
 
-   <!-- <header>
+   <header>
       <button class="hamburger">&#9776;</button> 
 
       <button class="cross">&#735;</button>
-   </header> -->
-  
- <!-- <header>
-      <button class="glyphicon glyphicon-th-list">
-    
-   
-      </button> 
+   </header>
 
-      <button class="glyphicon glyphicon-remove">
-      	
-
-      </button>
-   </header> -->
-
-<!-- <div class="menu"> class="btn btn-default" -->
-  <nav class="navbar navbar-inverse nav-justified" >
-  	<div class="container-fluid"><!-- v-bind:class="active" -->
-  	<ul class="nav navbar-nav">
-	  <li><a href="#" v-for="category in categories" v-on:click="makeActive(category.name, category.id)">{{ category.name }}</a></li>
-	  <li><a href="#" class="addCategory" v-on:click="makeActiveAdd('add')">+ Add</a></li>
-	  
-	  <!-- <select v-if="categories[active_ID]" v-model="Delete" v-on:change="deleteSelectedCategory()"> 
-	  	<option disabled selected hidden>Delete</option>
-	    <option v-for="category in categories" v-bind:value="category.name">
-	     {{ category.name }}
-	    </option>
-
-	  </select> -->
-	  <!-- <select v-if="categories[active_ID]" v-model="Delete" v-on:change="deleteSelectedCategory()"> -->
-
-	  <li class="dropdown">
-	  	 
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Delete
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#" v-for="category in categories" v-bind:value="category.name">{{ category.name }}</a></li>
-        </ul>
-        
-      </li>
-      <!-- </select> -->
+<div class="menu">
+  <nav v-bind:class="active">
+    <ul>
+    <a href="#" v-for="category in categories" v-on:click="makeActive(category.name, category.id)">{{ category.name }}</a>
+    <a href="#" class="addCategory" v-on:click="makeActiveAdd('add')">+ Add</a>
+    <a class="addCategory">Delete</a>
+    <select v-if="categories[active_ID]" v-model="Delete" v-on:change="deleteSelectedCategory()">
+      <option v-for="category in categories" v-bind:value="category.name">
+       {{ category.name }}
+      </option>
+    </select>
              
     </ul>
-    </div>
-
   </nav>
-<!-- </div> -->
+</div>
 
 
  <!-- <ul  v-if="categories[active_ID]">  
@@ -96,36 +64,36 @@
 
 
 
-<div class="text-center" >
+<div class="header">
 
  <br><br><h1>Task Manager</h1>
-
+</div>
 <!-- <button @click="alert_func">slide number</button> -->
 <swiper :options="swiperOption" ref="mySwiperA"> 
-	  <div class="swiper-pagination"  slot="pagination"></div> 
-	  <!-- <div class="swiper-button-prev" slot="button-prev"></div> -->
+    <div class="swiper-pagination"  slot="pagination"></div> 
+    <!-- <div class="swiper-button-prev" slot="button-prev"></div> -->
       <!-- <div class="swiper-button-next" slot="button-next"></div> -->
       <div class="swiper-scrollbar"   slot="scrollbar"></div>
   
-      <swiper-slide style="height: 500px;" v-for="category in categories">
-      	 <h1><small>{{category.name}}</small></h1>
-      	<!--  <h3>{{ active}}</h3>
-      	 <h4>{{ active_ID}}</h4> -->
+      <swiper-slide class="page_height" v-for="category in categories">
+         <h2>{{category.name}}</h2> 
+        <!--  <h3>{{ active}}</h3>
+         <h4>{{ active_ID}}</h4> -->
 
               
             <input type="text" class="placeholder" :placeholder="category.name" autofocus class="text-input" v-model="newTask" :hidden="active==='add'" v-on:keyup.enter="addTask(category.name)">  
 
             <template v-if="active === 'add'">
-			  <input type="text" class="placeholder" placeholder="add Category" v-model="addedtask" v-on:keyup.enter="addCategory(addedtask)">
-			</template>
+        <input type="text" class="placeholder" placeholder="add Category" v-model="addedtask" v-on:keyup.enter="addCategory(addedtask)">
+      </template>
 
 <p>{{ addedtask }}</p>
         
           <ul>
             <li :class="{ 'done_task' : task.done }" v-for="task in category.tasks">
-            	<v-touch v-on:press="delete_task(task.text, category.id)" v-bind:press-options="{time: 500}" v-on:tap="task_done(task.text, category.id)">
-            		{{ task.text }}
-            	</v-touch>
+              <v-touch v-on:press="delete_task(task.text, category.id)" v-bind:press-options="{time: 500}" v-on:tap="task_done(task.text, category.id)">
+                {{ task.text }}
+              </v-touch>
             </li>
           </ul>        
       </swiper-slide>  
@@ -137,7 +105,7 @@
       
       
 </swiper>
-</div>
+
 <!-- <v-touch v-on:tap="alert_func()">Tap me!</v-touch>  -->
 <!-- tag="a" -->
 

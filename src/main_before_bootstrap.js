@@ -2,7 +2,7 @@
 import Vue from 'vue'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
-require('assets/css/styles.css');
+// require('assets/css/styles.css');
 
 require('bootstrap/dist/css/bootstrap.min.css')
 
@@ -214,25 +214,25 @@ var demo = new Vue({
 
 
 
- $( ".glyphicon glyphicon-remove" ).hide();
+ $( ".cross" ).hide();
         $( ".menu" ).hide();
-        $( ".glyphicon glyphicon-th-list" ).click(function() {
+        $( ".hamburger" ).click(function() {
           $( ".menu" ).slideToggle( "slow", function() {
-            $( ".glyphicon glyphicon-th-list" ).hide();
-            $( ".glyphicon glyphicon-remove" ).show();
+            $( ".hamburger" ).hide();
+            $( ".cross" ).show();
           }); 
         });
 
-        $( ".glyphicon glyphicon-remove" ).click(function() {
+        $( ".cross" ).click(function() {
           $( ".menu" ).slideToggle( "slow", function() {
-            $( ".glyphicon glyphicon-remove" ).hide();
-            $( ".glyphicon glyphicon-th-list" ).show();
+            $( ".cross" ).hide();
+            $( ".hamburger" ).show();
           });
         });
 
         $( ".menu ul a" ).click(function() {
           $( ".menu" ).slideToggle( "slow", function() {
-            $( ".glyphicon glyphicon-remove" ).hide();
-            $( ".glyphicon glyphicon-th-list" ).show();
+            $( ".cross" ).hide();
+            $( ".hamburger" ).show();
           });
         });
