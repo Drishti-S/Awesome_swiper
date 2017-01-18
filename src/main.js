@@ -2,7 +2,7 @@
 import Vue from 'vue'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
-require('assets/css/styles.css');
+// require('assets/css/styles.css');
 
 require('bootstrap/dist/css/bootstrap.min.css')
 
